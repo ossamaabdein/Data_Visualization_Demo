@@ -1,0 +1,46 @@
+.login {
+    font-family: 'Roboto Slab', serif;
+    min-height: 85vh;
+    .userIcon {
+        margin: auto;
+        padding-bottom: 8px;
+        width: fit-content;
+        i {
+            padding: 20px;
+            font-size: 40px;
+            border: solid 3px;
+            border-radius: 50%;
+            color: #11304e;
+        }
+    }
+
+    h2 {
+        span {
+            color: rgb(37, 97, 202);
+        }
+    }
+}
+
+form, .errorAlert {
+    width: 50%;
+    margin: auto;
+}
+
+.submission {
+    .btn {
+        color: #fff;
+        background-color: #1b4c7c;
+        &:hover {
+            background-color: #11304e;
+        }
+    }
+}
+
+@media (max-width: 765px) {
+    form, .errorAlert {
+        width: 90%;
+    }
+    .submission {
+        text-align: center;
+    }
+}

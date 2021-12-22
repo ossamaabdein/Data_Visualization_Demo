@@ -1,0 +1,26 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-scale-ripple-multiple" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+<div class="home w-75">
+  <h4 class="mt-3">Outbreaks</h4>
+  <div class="outbreaksChart py-5">
+    <ngx-charts-bar-vertical
+    [results]="semesterOutbreaks"
+    [view]="view"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showDataLabel]="showDataLabel"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+  
+</div>
+
+
+
+

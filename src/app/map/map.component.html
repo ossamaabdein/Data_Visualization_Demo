@@ -1,0 +1,10 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-scale-ripple-multiple" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+
+<div class="map ms-5 my-4">
+  <h4 class="mb-3">Animals Locations in Saudi Arabia</h4>
+  <agm-map [zoom]="zoom" [latitude]="lat" [longitude]="lng">
+    <agm-marker *ngFor="let item of locationData" [latitude]="item.lat" [longitude]="item.lng"></agm-marker>
+  </agm-map>
+</div>
+
