@@ -11,15 +11,15 @@
                 <div class="formControl">
                     <label for="email">Email:</label>
                     <input formControlName="Email" class="form-control" type="email">
-                    <div class="alerts alert alert-danger mt-2 py-1" *ngIf="loginForm.get('email')?.errors != null && loginForm.get('email')?.touched">
-                        <p class="mb-0" *ngIf="loginForm.get('email')?.errors?.['required']">Email is required</p>
-                    <p class="mb-0" *ngIf="loginForm.get('email')?.errors?.['email']">Email is invalid</p>
+                    <div class="alerts alert alert-danger mt-2 py-1" *ngIf="loginForm.get('Email')?.errors != null && loginForm.get('Email')?.touched">
+                        <p class="mb-0" *ngIf="loginForm.get('Email')?.errors?.['required']">Email is required</p>
+                        <p class="mb-0" *ngIf="loginForm.get('Email')?.errors?.['email']">Email is invalid</p>
                     </div>  
                 </div>
                 <div class="formControl">
                     <label for="password">Password:</label>
                     <input formControlName="Password" class="form-control" type="password">
-                    <div class="alerts alert alert-danger mt-2 py-1" *ngIf="loginForm.get('password')?.errors != null && loginForm.get('password')?.touched">
+                    <div class="alerts alert alert-danger mt-2 py-1" *ngIf="loginForm.get('Password')?.errors != null && loginForm.get('Password')?.touched">
                         <p class="mb-0">Password is required</p>
                     </div>
                 </div>

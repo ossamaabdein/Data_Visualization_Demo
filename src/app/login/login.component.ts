@@ -23,11 +23,10 @@ export class LoginComponent implements OnInit {
   }
 
   submitloginForm(loginForm: FormGroup) {
-    console.log(loginForm)
     if(loginForm.valid) {
       this._AuthService.login(loginForm.value).subscribe((response) => {
         if(response.msg == "success") {
-          localStorage.setItem('userToken', response.token);
+          sessionStorage.setItem('userToken', response.token);
           this._AuthService.saveUserData();
           this._Router.navigate(['home'])
         } else {

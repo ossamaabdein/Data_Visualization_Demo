@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class GetDataService {  
 
-  auth_token = localStorage.getItem('userToken') 
+  auth_token = sessionStorage.getItem('userToken') 
 
   response: any
   constructor(private _HttpClient: HttpClient) {

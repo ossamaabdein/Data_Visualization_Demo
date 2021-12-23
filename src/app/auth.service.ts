@@ -11,12 +11,12 @@ export class AuthService {
   userData = new BehaviorSubject(null);
 
   saveUserData() {
-    let encodedUserData = JSON.stringify(localStorage.getItem('userToken'));
+    let encodedUserData = JSON.stringify(sessionStorage.getItem('userToken'));
     this.userData.next(jwtDecode(encodedUserData));
   }
 
   constructor(private _HttpClient: HttpClient, private _Router: Router) { 
-    if(localStorage.getItem('userToken') != null) {
+    if(sessionStorage.getItem('userToken') != null) {
       this.saveUserData();
     }
   }
@@ -27,7 +27,7 @@ export class AuthService {
   }
 
   logout() {
-    localStorage.removeItem('userToken');
+    sessionStorage.removeItem('userToken');
     this.userData.next(null);
     this._Router.navigate(['login']);
   }
